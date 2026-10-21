@@ -1,0 +1,14 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Node dependencies (future React project)
+node_modules/
