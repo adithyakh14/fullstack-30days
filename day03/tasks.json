@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "title": "Create PRD",
+        "completed": true
+    },
+    {
+        "id": 2,
+        "title": "Prepare Design",
+        "completed": false
+    }
+]

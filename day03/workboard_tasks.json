@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Create PRD",
+        "priority": "High",
+        "completed": false
+    },
+    {
+        "title": "Prepare Design",
+        "priority": "Medium",
+        "completed": false
+    }
+]
