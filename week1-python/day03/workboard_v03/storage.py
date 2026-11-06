@@ -17,6 +17,17 @@ def load_tasks():
 
     if not isinstance(tasks, list):
         raise ValueError("Task data must be a list. No changes were saved.")
+
+    required_fields = {"id", "title", "priority", "completed"}
+    for position, task in enumerate(tasks, start=1):
+        if not isinstance(task, dict):
+            raise ValueError(
+                f"Task record {position} must be a dictionary. No changes were saved."
+            )
+        if not required_fields.issubset(task):
+            raise ValueError(
+                f"Task record {position} is missing required fields. No changes were saved."
+            )
     return tasks
 
 

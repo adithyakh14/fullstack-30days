@@ -1,4 +1,4 @@
-def add_task(tasks, title, priority):
+def add_task(tasks: list[dict], title: str, priority: str) -> dict:
     next_id = 1
     for task in tasks:
         if task["id"] >= next_id:
@@ -14,7 +14,7 @@ def add_task(tasks, title, priority):
     return new_task
 
 
-def complete_task(tasks, task_id):
+def complete_task(tasks: list[dict], task_id: int) -> str:
     for task in tasks:
         if task["id"] == task_id:
             if task["completed"]:
@@ -24,7 +24,7 @@ def complete_task(tasks, task_id):
     return "not_found"
 
 
-def calculate_summary(tasks):
+def calculate_summary(tasks: list[dict]) -> tuple[int, int, int, float]:
     total = len(tasks)
     completed = 0
     for task in tasks:
@@ -33,7 +33,7 @@ def calculate_summary(tasks):
 
     pending = total - completed
     if total == 0:
-        percentage = 0
+        percentage = 0.0
     else:
         percentage = completed / total * 100
     return total, completed, pending, percentage
